@@ -10,5 +10,4 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     document.body.className = 'hold-transition login-page';
   }
-
 }
