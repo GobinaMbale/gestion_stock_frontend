@@ -8,6 +8,7 @@ const routes: Routes = [
   {
     path: '',
     component: MemberComponent,
+    canActivate: [AuthGuard],
     loadChildren: () => import('./member/member.module').then(m => m.MemberModule)
   },
   {
