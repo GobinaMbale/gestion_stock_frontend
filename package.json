@@ -6,7 +6,12 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "gs-api": "npm run gs-api:create-dist && npm run gs-api:download && npm run gs-api:extract && npm run gs-api:swagger-gen",
+    "gs-api:create-dist": "mkdir tools\\swagger\\dist && mkdir tools\\swagger\\src",
+    "gs-api:download": "copy C:\\Users\\LENOVO\\Documents\\Github\\gestionstock\\gestion_stock_backend\\target\\gestiondestock-0.0.1-SNAPSHOT.jar .\\tools\\swagger\\dist && copy C:\\Users\\LENOVO\\Documents\\Github\\gestionstock\\gestion_stock_backend\\target\\swagger.json .\\tools\\swagger\\src",
+    "gs-api:extract": "node .\\tools\\swagger\\src\\swagger.json 0.0.1-SNAPSHOT",
+    "gs-api:swagger-gen": ".\\node_modules\\.bin\\ng-swagger-gen -i .\\tools\\swagger\\src\\swagger.json"
   },
   "private": true,
   "dependencies": {
@@ -19,9 +24,11 @@
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
     "autoprefixer": "10.4.5",
+    "ng-swagger-gen": "^2.3.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.12.0"
+    "zone.js": "~0.12.0",
+    "ngx-webstorage": "^11.1.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^15.2.4",
