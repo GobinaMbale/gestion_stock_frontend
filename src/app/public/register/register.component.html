@@ -1,0 +1,71 @@
+<div class="container my-container">
+  <div class="card justify-content-center">
+    <h1 class="card-title text-center">S'inscrire</h1>
+    <div class="alert alert-danger" *ngIf="errorsMsg.length > 0">
+      <div *ngFor="let msg of errorsMsg">
+        <span >{{msg}}</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <form novalidate id="registerForm" role="form" >
+
+        <div class="row">
+          <div class="col">
+            <div class="mb-3">
+              <label for="floatingName">Nom</label>
+              <input type="text" class="form-control" id="floatingName" name="nom" placeholder="Nom">
+            </div>
+            <div class="mb-3">
+              <label for="floatingTaxCode">Code fiscal</label>
+              <input type="text" class="form-control" id="floatingTaxCode" name="codeFiscal" placeholder="Code fiscal">
+            </div>
+            <div class="mb-3">
+              <label for="floatingEmail">E-mail</label>
+              <input type="email" class="form-control" id="floatingEmail" name="email" placeholder="E-mail">
+            </div>
+            <div class="mb-3">
+              <label for="floatingAddress1">Adresse 1</label>
+              <input type="text" class="form-control" id="floatingAddress1" name="adresse1" placeholder="Adresse 1">
+            </div>
+            <div class="mb-3">
+              <label for="floatingAddress2">Adresse 2</label>
+              <input type="text" class="form-control" id="floatingAddress2" name="adresse2" placeholder="Adresse 2">
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label for="floatingCity">Ville</label>
+              <input type="text" class="form-control" id="floatingCity" name="ville" placeholder="Ville">
+            </div>
+            <div class="mb-3">
+              <label for="floatingCode">Code postal</label>
+              <input type="text" class="form-control" id="floatingCode" name="codePostale" placeholder="Code postal">
+            </div>
+            <div class="mb-3">
+              <label for="floatingCountry">Pays</label>
+              <input type="text" class="form-control" id="floatingCountry" name="pays" placeholder="Pays">
+            </div>
+            <div class="mb-3">
+              <label for="floatingnumTel">Numero de telephone</label>
+              <input type="text" class="form-control" id="floatingnumTel" name="numTel" placeholder="Numero de telephone">
+            </div>
+            <div class="mb-3">
+              <label for="description">Description</label>
+              <textarea rows="3" class="form-control" id="description" name="description" placeholder="Description"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3 d-flex justify-content-between">
+          <button type="button" class="btn btn-link" routerLink="/login">Se connecter</button>
+          <button type="submit" class="btn btn-primary">
+            <i class="fas fa-check"></i>&nbsp;
+            S'inscrire
+          </button>
+        </div>
+
+
+      </form>
+    </div>
+  </div>
+</div>
