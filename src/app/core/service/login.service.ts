@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import {AuthenticationService} from "../../../../gs-api/src/services";
-import {AuthenticationRequest} from "../../../../gs-api/src/models/authentication-request";
+import {AuthenticationService} from "../../../gs-api/src/services";
+import {AuthenticationRequest} from "../../../gs-api/src/models/authentication-request";
 import {map, Observable} from "rxjs";
-import {AuthenticationResponse} from "../../../../gs-api/src/models/authentication-response";
+import {AuthenticationResponse} from "../../../gs-api/src/models/authentication-response";
 import {Router} from "@angular/router";
-import {WebStorageService} from "../../../core/service/web-storage.service";
+import {WebStorageService} from "./web-storage.service";
 
 @Injectable({
   providedIn: 'root'

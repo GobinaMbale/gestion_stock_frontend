@@ -5,9 +5,10 @@
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
+      <p class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</p>
       <p class="login-box-msg">Sign in to start your session</p>
 
-      <form (ngSubmit)="loginForm">
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
         <div class="input-group mb-3">
           <input type="email" formControlName="login" class="form-control" placeholder="Email">
           <div class="input-group-append">

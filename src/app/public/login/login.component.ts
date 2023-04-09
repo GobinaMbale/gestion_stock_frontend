@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {LoginService} from "./service/login.service";
+import {LoginService} from "../../core/service/login.service";
 import {Router} from "@angular/router";
 import {FormBuilder, Validators} from "@angular/forms";
 import {AuthenticationRequest} from "../../../gs-api/src/models/authentication-request";
