@@ -9,7 +9,7 @@ import {NgxWebstorageModule} from "ngx-webstorage";
 @NgModule({
   declarations: [],
   imports: [
-    NgxWebstorageModule.forRoot({ prefix: 'app', separator: '-' }),
+    NgxWebstorageModule.forRoot({ prefix: 'app', separator: '_' }),
     HttpClientModule
   ],
   providers: [
